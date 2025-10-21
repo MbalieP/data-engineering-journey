@@ -32,9 +32,6 @@ print(df.iloc[0:11:2, 0:3]) # 1st 3 columns,columns that you would need
 
 #exercise
 
-df = pd.read_csv("C:/Users/User/Documents/Data Engineering/personal_learn/pandas python/pokemon.csv", index_col = "Name")
-
-pokemon = input("Enter a pokemon name: ")
 
 try:
     print(df.loc[pokemon])
