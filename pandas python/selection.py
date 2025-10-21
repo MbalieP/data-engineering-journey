@@ -20,5 +20,25 @@ print(df[["Name","Height","Weight"]].to_string())
 df = pd.read_csv("C:/Users/User/Documents/Data Engineering/personal_learn/pandas python/pokemon.csv", index_col = "Name")
 print(df.loc["Pikachu"])
 
+#SELECT MULTIPLE COLI=UNSIN ONE ROW
+df = pd.read_csv("C:/Users/User/Documents/Data Engineering/personal_learn/pandas python/pokemon.csv", index_col = "Name")
+print(df.loc["Pikachu",["Height","Weight"]])
+
+print(df.loc["Pikachu": "Blastoise",["Height","Weight"]])
+#integer indexing
+print(df.iloc[0:11])
+print(df.iloc[0:11:2]) #second step
+print(df.iloc[0:11:2, 0:3]) # 1st 3 columns,columns that you would need
+
+#exercise
+
+df = pd.read_csv("C:/Users/User/Documents/Data Engineering/personal_learn/pandas python/pokemon.csv", index_col = "Name")
+
+pokemon = input("Enter a pokemon name: ")
+
+try:
+    print(df.loc[pokemon])
+except keyError:
+    print(f"{pokemon} not found")
 
 
